@@ -1,26 +1,229 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Library rail collapsed (html[data-sidebar=collapsed]) */
+@custom-variant collapsed (:root[data-sidebar="collapsed"] &);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+/*
+ * Sokoni design tokens — Spotify web-player grammar.
+ * See DESIGN.md for the rationale behind every value. Colors are named by
+ * role, never by hue, so a component never has to know what green is.
+ */
+@theme {
+  /* Surfaces: a black frame holding rounded #121212 panes */
+  --color-frame: #000000;
+  --color-canvas: #121212;
+  --color-surface: #1f1f1f;
+  --color-surface-hi: #2a2a2a;
+  --color-menu: #282828;
+  --color-menu-hi: #3e3e3e;
+  --color-tint: rgb(255 255 255 / 0.07);
+  --color-tint-hi: rgb(255 255 255 / 0.1);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Text */
+  --color-fg: #ffffff;
+  --color-subdued: #b3b3b3;
+  --color-faint: #7c7c7c; /* borders and >=24px text only */
+  --color-hint: #929292; /* placeholders: 5.3:1 on surface, 6:1 on base */
+  --color-line: #2a2a2a;
+
+  /* Roles */
+  --color-accent: #1ed760; /* Sokoni platform actions + every live state */
+  --color-accent-hi: #3be477;
+  --color-accent-press: #1abc54;
+  --color-on-accent: #000000;
+  --color-whatsapp: #25d366; /* only ever on the WhatsApp glyph */
+  --color-verified: #4cb3ff;
+  --color-verified-fill: #3d91f4;
+  --color-negative: #f3727f;
+  --color-warning: #ffa42b;
+  --color-toast: #2d6bc4; /* white text 5.2:1 */
+
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-pane: 8px;
+  --radius-card: 6px;
+
+  --ease-snap: cubic-bezier(0.3, 0, 0, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-toast-in: toast-in 280ms var(--ease-out-expo);
+  --animate-menu-in: menu-in 140ms var(--ease-out-expo);
+
+  @keyframes toast-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px) scale(0.98);
+    }
+  }
+  @keyframes menu-in {
+    from {
+      opacity: 0;
+      transform: translateY(-4px) scale(0.98);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --sidebar-w: 300px;
+  color-scheme: dark;
+}
+
+/* Collapsed library rail; set before paint by the inline script in layout.tsx */
+:root[data-sidebar="collapsed"] {
+  --sidebar-w: 72px;
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  :root:not([data-sidebar="collapsed"]) {
+    --sidebar-w: 264px;
+  }
+}
+
+/* Spotify desktop's right-hand view; only from 1280px, where main keeps room */
+:root {
+  --panel-w: 320px;
+}
+@media (min-width: 1536px) {
+  :root {
+    --panel-w: 360px;
+  }
+}
+
+/* Element defaults live in the base layer so utilities can always override them. */
+@layer base {
+  html {
+    background: var(--color-frame);
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: var(--color-frame);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01";
+    caret-color: var(--color-accent);
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-on-accent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-fg);
+    outline-offset: 2px;
+  }
+
+  a {
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+  }
+}
+
+@layer components {
+  /* Spotify-style scrollbars: invisible until the pane is hovered */
+  .pane-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    transition: scrollbar-color 200ms;
+  }
+  .pane-scroll:hover,
+  .pane-scroll:focus-within {
+    scrollbar-color: rgb(255 255 255 / 0.3) transparent;
+  }
+
+  /*
+   * Single-row shelf: Spotify lays out cards in an auto-fill grid and hides
+   * every row after the first, so the shelf always shows exactly as many
+   * whole cards as fit. Below 640px it becomes a horizontal snap scroller.
+   */
+  .shelf-row {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 152px;
+    gap: 4px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin-inline: -12px;
+    padding-inline: 4px;
+  }
+  .shelf-row::-webkit-scrollbar {
+    display: none;
+  }
+  .shelf-row > * {
+    scroll-snap-align: start;
+  }
+  @media (min-width: 640px) {
+    .shelf-row {
+      grid-auto-flow: row;
+      grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+      grid-auto-columns: auto;
+      grid-template-rows: 1fr;
+      grid-auto-rows: 0;
+      overflow: hidden;
+      row-gap: 0;
+      margin-inline: -12px;
+      padding-inline: 0;
+    }
+  }
+  .shelf-row.shelf-wrap {
+    grid-auto-flow: row;
+    grid-template-columns: repeat(auto-fill, minmax(152px, 1fr));
+    grid-auto-rows: auto;
+    overflow: visible;
+    row-gap: 8px;
+  }
+  @media (min-width: 640px) {
+    .shelf-row.shelf-wrap {
+      grid-template-columns: repeat(auto-fill, minmax(172px, 1fr));
+    }
+  }
+
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/*
+ * Shell columns and the chat panel. Unlayered on purpose: these decide
+ * whether a column exists at all, and no utility should override them.
+ */
+@media (min-width: 1024px) {
+  .shell-cols {
+    display: grid;
+    grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+  }
+}
+.chat-panel {
+  display: none;
+}
+@media (min-width: 1280px) {
+  :root[data-panel="open"] .shell-cols {
+    grid-template-columns: var(--sidebar-w) minmax(0, 1fr) var(--panel-w);
+  }
+  :root[data-panel="open"] .chat-panel {
+    display: flex;
+  }
+}
+
+/* Phones: make room for the floating chat bar */
+@media (max-width: 1023px) {
+  body:has(.mini-chat) #main {
+    padding-bottom: 9.5rem;
+  }
+  body:has(.mini-chat) .toaster {
+    bottom: 8.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

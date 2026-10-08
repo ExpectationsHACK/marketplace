@@ -1,0 +1,398 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-05T11:55:18.588Z",
+  "title": "Design System: Sokoni",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "Sokoni Green",
+        "canonical": "#1ed760",
+        "tonalRamp": [
+          "#063d1a",
+          "#0a5c27",
+          "#0f7d35",
+          "#159e44",
+          "#1abc54",
+          "#1ed760",
+          "#3be477",
+          "#9ff1bb"
+        ]
+      },
+      "verified-fill": {
+        "role": "secondary",
+        "displayName": "Rosette Blue",
+        "canonical": "#3d91f4",
+        "tonalRamp": [
+          "#0b2647",
+          "#103a6b",
+          "#17518f",
+          "#1f69b8",
+          "#2d7fe0",
+          "#3d91f4",
+          "#4cb3ff",
+          "#b5dcff"
+        ]
+      },
+      "whatsapp": {
+        "role": "secondary",
+        "displayName": "WhatsApp Green (glyph only)",
+        "canonical": "#25d366",
+        "tonalRamp": [
+          "#08371b",
+          "#0d5229",
+          "#127037",
+          "#188f46",
+          "#1fb055",
+          "#25d366",
+          "#5ee08c",
+          "#b3f1c9"
+        ]
+      },
+      "frame": {
+        "role": "neutral",
+        "displayName": "Frame Black",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "#000000",
+          "#121212",
+          "#1f1f1f",
+          "#2a2a2a",
+          "#3e3e3e",
+          "#7c7c7c",
+          "#b3b3b3",
+          "#ffffff"
+        ]
+      },
+      "canvas": {
+        "role": "neutral",
+        "displayName": "Pane Black",
+        "canonical": "#121212",
+        "tonalRamp": [
+          "#000000",
+          "#121212",
+          "#1f1f1f",
+          "#2a2a2a",
+          "#3e3e3e",
+          "#7c7c7c",
+          "#b3b3b3",
+          "#ffffff"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Raised Charcoal",
+        "canonical": "#1f1f1f",
+        "tonalRamp": [
+          "#000000",
+          "#121212",
+          "#1f1f1f",
+          "#2a2a2a",
+          "#3e3e3e",
+          "#7c7c7c",
+          "#b3b3b3",
+          "#ffffff"
+        ]
+      },
+      "surface-hi": {
+        "role": "neutral",
+        "displayName": "Hover Charcoal",
+        "canonical": "#2a2a2a"
+      },
+      "menu": {
+        "role": "neutral",
+        "displayName": "Menu Gray",
+        "canonical": "#282828"
+      },
+      "menu-hi": {
+        "role": "neutral",
+        "displayName": "Menu Highlight",
+        "canonical": "#3e3e3e"
+      },
+      "tint": {
+        "role": "neutral",
+        "displayName": "White Tint 7%",
+        "canonical": "rgb(255 255 255 / 0.07)"
+      },
+      "tint-hi": {
+        "role": "neutral",
+        "displayName": "White Tint 10%",
+        "canonical": "rgb(255 255 255 / 0.1)"
+      },
+      "fg": {
+        "role": "neutral",
+        "displayName": "White (WhatsApp pill fill, primary text)",
+        "canonical": "#ffffff"
+      },
+      "subdued": {
+        "role": "neutral",
+        "displayName": "Subdued Gray",
+        "canonical": "#b3b3b3"
+      },
+      "hint": {
+        "role": "neutral",
+        "displayName": "Hint Gray",
+        "canonical": "#929292"
+      },
+      "faint": {
+        "role": "neutral",
+        "displayName": "Faint Gray (hairlines, 24px+ text)",
+        "canonical": "#7c7c7c"
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "canonical": "#2a2a2a"
+      },
+      "negative": {
+        "role": "neutral",
+        "displayName": "Dispute Pink",
+        "canonical": "#f3727f"
+      },
+      "warning": {
+        "role": "neutral",
+        "displayName": "Building Amber",
+        "canonical": "#ffa42b"
+      },
+      "toast": {
+        "role": "neutral",
+        "displayName": "Toast Blue",
+        "canonical": "#2d6bc4"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Entity Title",
+        "purpose": "900 weight for the page's one name: entity titles (length-stepped) and the home statement."
+      },
+      "headline": {
+        "displayName": "Shelf Title",
+        "purpose": "Shelf and section titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Category-tile labels, panel headings, button labels."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text and card titles."
+      },
+      "meta": {
+        "displayName": "Meta",
+        "purpose": "Subdued meta lines, chips, small buttons."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Chat-bar secondary lines, mobile tab labels, timestamps."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "Price leads every item card (1.125rem bold); all prices, scores and counts use tabular numerals."
+      }
+    },
+    "shadows": [
+      {
+        "name": "art-lift",
+        "value": "0 8px 24px rgb(0 0 0 / 0.5)",
+        "purpose": "Standalone art outside cards (search shop art, post/onboarding previews), the phone chat bar, toasts."
+      },
+      {
+        "name": "entity-art",
+        "value": "0 4px 60px rgb(0 0 0 / 0.5)",
+        "purpose": "Large cover beside an entity title."
+      },
+      {
+        "name": "logo-tile",
+        "value": "0 4px 12px rgb(0 0 0 / 0.35)",
+        "purpose": "Square logo tile on a shop card's shopfront band; a browse tile's tucked cover."
+      },
+      {
+        "name": "menu",
+        "value": "0 16px 24px rgb(0 0 0 / 0.3), 0 6px 8px rgb(0 0 0 / 0.2)",
+        "purpose": "Context menus."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-snap",
+        "value": "cubic-bezier(0.3, 0, 0, 1)",
+        "purpose": "Button, icon-button and bookmark hover scale (100ms)."
+      },
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Home wash (700ms), wizard progress (500ms), browse-tile tilt (300ms), toasts (280ms), menus (140ms)."
+      },
+      {
+        "name": "card-hover",
+        "value": "background-color 200ms",
+        "purpose": "Card and category-tile tint on hover."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "shell",
+        "value": "1024px"
+      },
+      {
+        "name": "chat-panel",
+        "value": "1280px"
+      },
+      {
+        "name": "chat-panel-default-open",
+        "value": "1440px"
+      },
+      {
+        "name": "chat-panel-wide",
+        "value": "1536px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Green pill for Sokoni platform actions: post an ad, open a shop, reply, continue.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Post an ad</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 48px; padding: 0 32px; border: none; border-radius: 9999px; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; font-size: 16px; font-weight: 700; white-space: nowrap; cursor: pointer; transition: transform 100ms cubic-bezier(0.3,0,0,1), background-color 100ms cubic-bezier(0.3,0,0,1), box-shadow 100ms; } .ds-btn:hover { transform: scale(1.04); } .ds-btn:active { transform: scale(1); transition-duration: 0s; } .ds-btn:focus-visible { outline: 2px solid #fff; outline-offset: 2px; } .ds-btn-primary { background: var(--color-accent, #1ed760); color: var(--color-on-accent, #000); } .ds-btn-primary:hover { background: var(--color-accent-hi, #3be477); } .ds-btn-primary:active { background: var(--color-accent-press, #1abc54); }"
+    },
+    {
+      "name": "WhatsApp Button",
+      "kind": "button",
+      "refersTo": "button-whatsapp",
+      "description": "White pill with the WhatsApp glyph: the primary buy action on listing pages. WhatsApp is never green.",
+      "html": "<a class=\"ds-btn-wa\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path fill=\"#25d366\" d=\"M12 2C6.5 2 2 6.4 2 12c0 1.9.5 3.6 1.4 5.1L2 22l5.1-1.3c1.4.8 3.1 1.2 4.9 1.2 5.5 0 10-4.4 10-10S17.5 2 12 2z\"/><path fill=\"#fff\" d=\"M17.2 14.3c-.3-.1-1.6-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.1.2-.3.2-.5.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.5.1-.6l.4-.5c.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.2-.1-.2-.3-.2-.5-.3z\"/></svg>Chat on WhatsApp</a>",
+      "css": ".ds-btn-wa { display: inline-flex; align-items: center; gap: 8px; height: 56px; padding: 0 32px; border-radius: 9999px; background: #fff; color: #000; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; font-size: 16px; font-weight: 700; text-decoration: none; transition: transform 100ms cubic-bezier(0.3,0,0,1), background-color 100ms; } .ds-btn-wa:hover { transform: scale(1.04); background: #f2f2f2; } .ds-btn-wa:active { transform: scale(1); background: #d9d9d9; } .ds-btn-wa:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary pill: Message seller, Follow, Your shop, View profile.",
+      "html": "<button class=\"ds-btn-outline\">Message seller</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; height: 32px; padding: 0 16px; border: none; border-radius: 9999px; background: transparent; color: #fff; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 700; box-shadow: inset 0 0 0 1px var(--color-faint, #7c7c7c); cursor: pointer; transition: transform 100ms cubic-bezier(0.3,0,0,1), box-shadow 100ms; } .ds-btn-outline:hover { transform: scale(1.04); box-shadow: inset 0 0 0 1px #fff; } .ds-btn-outline:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Filter Chips",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Tinted pills; the selected chip goes white with black text.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip ds-chip-on\" aria-pressed=\"true\">Saved items</button><button class=\"ds-chip\" aria-pressed=\"false\">Shops</button><button class=\"ds-chip\" aria-pressed=\"false\">My ads</button></div>",
+      "css": ".ds-chips { display: flex; gap: 8px; } .ds-chip { display: inline-flex; align-items: center; height: 32px; padding: 0 12px; border: none; border-radius: 9999px; background: rgb(255 255 255 / 0.07); color: #fff; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; font-size: 14px; cursor: pointer; transition: background-color 100ms; } .ds-chip:hover { background: rgb(255 255 255 / 0.1); } .ds-chip:focus-visible { outline: 2px solid #fff; outline-offset: 2px; } .ds-chip-on { background: #fff; color: #000; font-weight: 600; } .ds-chip-on:hover { background: #f2f2f2; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "48px field, 4px radius, inset hairline that turns white on hover and focus.",
+      "html": "<label class=\"ds-label\" for=\"ds-f\">Listing title</label><input id=\"ds-f\" class=\"ds-input\" placeholder=\"What are you selling?\">",
+      "css": ".ds-label { display: block; margin-bottom: 8px; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; font-size: 14px; font-weight: 700; color: #fff; } .ds-input { display: block; width: 100%; height: 48px; padding: 0 16px; border: none; border-radius: 4px; background: #121212; color: #fff; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; font-size: 16px; box-shadow: inset 0 0 0 1px #7c7c7c; transition: box-shadow 100ms; } .ds-input::placeholder { color: #929292; } .ds-input:hover { box-shadow: inset 0 0 0 1px #fff; } .ds-input:focus-visible { outline: none; box-shadow: inset 0 0 0 2px #fff; } .ds-input[aria-invalid=true] { box-shadow: inset 0 0 0 1px #f3727f; }"
+    },
+    {
+      "name": "Search Pill",
+      "kind": "nav",
+      "refersTo": "search",
+      "description": "Top-bar live search: charcoal pill with a 2px white ring on focus.",
+      "html": "<form class=\"ds-search\" role=\"search\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.75\" stroke-linecap=\"round\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><input aria-label=\"Search\" placeholder=\"Search phones, rentals, jobs, services…\"></form>",
+      "css": ".ds-search { display: flex; align-items: center; gap: 12px; height: 48px; max-width: 474px; padding: 0 12px; border-radius: 9999px; background: #1f1f1f; color: #b3b3b3; box-shadow: inset 0 0 0 1px transparent; transition: background-color 100ms, box-shadow 100ms; } .ds-search:hover { background: #2a2a2a; box-shadow: inset 0 0 0 1px #2a2a2a; } .ds-search:focus-within { box-shadow: inset 0 0 0 2px #fff; color: #fff; } .ds-search input { flex: 1; height: 100%; border: none; background: transparent; color: #fff; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; font-size: 16px; outline: none; } .ds-search input::placeholder { color: #b3b3b3; }"
+    },
+    {
+      "name": "Listing Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Borderless card lifting to white/7% on hover: 4:3 cover with an always-visible bookmark, price first, city with map pin, seller trust ring and rosette.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-cover\"><svg class=\"ds-cover-glyph\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.35\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><rect x=\"5\" y=\"2\" width=\"14\" height=\"20\" rx=\"2\"/><path d=\"M12 18h.01\"/></svg><button class=\"ds-bookmark\" aria-label=\"Save\" aria-pressed=\"false\"><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z\"/></svg></button></div><p class=\"ds-card-price\">₦640,000</p><h3 class=\"ds-card-title\">iPhone 13 Pro, 256GB</h3><p class=\"ds-card-meta\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg>Lagos</p><p class=\"ds-card-meta\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 14 14\" aria-hidden=\"true\"><circle cx=\"7\" cy=\"7\" r=\"5.75\" fill=\"none\" stroke=\"rgb(255 255 255 / 0.12)\" stroke-width=\"2.5\"/><circle cx=\"7\" cy=\"7\" r=\"5.75\" fill=\"none\" stroke=\"#1ed760\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-dasharray=\"36.1\" stroke-dashoffset=\"4.3\" transform=\"rotate(-90 7 7)\"/></svg><span>Amaka Obi</span><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" aria-label=\"Verified seller\"><circle cx=\"12\" cy=\"12\" r=\"10.5\" fill=\"#3d91f4\"/><path d=\"m7.9 12.4 2.7 2.7 5.5-5.6\" fill=\"none\" stroke=\"#fff\" stroke-width=\"2.1\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></p></article>",
+      "css": ".ds-card { width: 220px; padding: 12px; border-radius: 6px; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; transition: background-color 200ms; cursor: pointer; } .ds-card:hover { background: rgb(255 255 255 / 0.07); } .ds-cover { position: relative; overflow: hidden; aspect-ratio: 4 / 3; margin-bottom: 12px; border-radius: 6px; background: radial-gradient(120% 90% at 12% 8%, rgb(255 255 255 / 0.24), transparent 55%), linear-gradient(165deg, transparent 45%, rgb(0 0 0 / 0.38)), #0d73ec; } .ds-cover-glyph { position: absolute; right: -11%; bottom: -9%; width: 76%; height: 76%; color: rgb(255 255 255 / 0.9); transform: rotate(-14deg); } .ds-bookmark { position: absolute; top: 8px; right: 8px; display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: none; border-radius: 9999px; background: rgb(0 0 0 / 0.6); color: #fff; backdrop-filter: blur(4px); cursor: pointer; transition: transform 100ms cubic-bezier(0.3,0,0,1), background-color 100ms; } .ds-bookmark:hover { transform: scale(1.06); background: rgb(0 0 0 / 0.8); } .ds-bookmark[aria-pressed=true] { background: #1ed760; color: #000; } .ds-bookmark[aria-pressed=true] svg { fill: currentColor; } .ds-bookmark:focus-visible { outline: 2px solid #fff; outline-offset: 2px; } .ds-card-price { margin: 0; font-size: 18px; font-weight: 700; line-height: 1.25; color: #fff; font-variant-numeric: tabular-nums; } .ds-card-title { margin: 2px 0 0; font-size: 16px; font-weight: 400; line-height: 1.375; color: #fff; } .ds-card-meta { display: flex; align-items: center; gap: 6px; margin: 4px 0 0; font-size: 14px; color: #b3b3b3; }"
+    },
+    {
+      "name": "Category Tile",
+      "kind": "custom",
+      "refersTo": "category-tile",
+      "description": "Home 'Shop by category' tile: seeded cover flush left, bold label, tabular listing count; hovering repaints the home wash.",
+      "html": "<a class=\"ds-tile\" href=\"#\"><span class=\"ds-tile-art\" style=\"background:#e8115b\"></span><span><span class=\"ds-tile-label\">For sale</span><span class=\"ds-tile-count\">24 listings</span></span></a>",
+      "css": ".ds-tile { display: flex; align-items: center; gap: 12px; height: 64px; max-width: 300px; padding-right: 12px; overflow: hidden; border-radius: 6px; background: rgb(255 255 255 / 0.07); color: #fff; text-decoration: none; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; transition: background-color 200ms; } .ds-tile:hover { background: rgb(255 255 255 / 0.1); } .ds-tile:focus-visible { outline: 2px solid #fff; outline-offset: 2px; } .ds-tile-art { width: 64px; height: 64px; flex-shrink: 0; } .ds-tile-label { display: block; font-size: 16px; font-weight: 700; line-height: 1.25; } .ds-tile-count { display: block; font-size: 14px; color: #b3b3b3; font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Shop Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Storefront card: 4:3 shopfront band in the shop's seeded color, Shop badge, square logo tile, name with rosette, category · city, outline Follow pill.",
+      "html": "<article class=\"ds-shop\"><div class=\"ds-shop-band\"><span class=\"ds-shop-badge\">Shop</span><span class=\"ds-shop-logo\">AH</span></div><h3 class=\"ds-shop-name\">Adire House</h3><p class=\"ds-shop-meta\">Fabric · Lagos</p><button class=\"ds-shop-follow\">Follow</button></article>",
+      "css": ".ds-shop { width: 220px; padding: 12px; border-radius: 6px; font-family: Figtree, ui-sans-serif, system-ui, sans-serif; transition: background-color 200ms; } .ds-shop:hover { background: rgb(255 255 255 / 0.07); } .ds-shop-band { position: relative; display: flex; align-items: flex-end; aspect-ratio: 4 / 3; margin-bottom: 12px; padding: 12px; border-radius: 6px; overflow: hidden; background: linear-gradient(160deg, #e8115b, color-mix(in srgb, #e8115b 55%, #000)); } .ds-shop-badge { position: absolute; top: 8px; left: 8px; padding: 2px 8px; border-radius: 9999px; background: rgb(0 0 0 / 0.6); color: #fff; font-size: 12px; font-weight: 700; } .ds-shop-logo { display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 8px; background: color-mix(in srgb, #e8115b 70%, #000); color: #fff; font-size: 20px; font-weight: 800; letter-spacing: -0.03em; box-shadow: 0 4px 12px rgb(0 0 0 / 0.35), 0 0 0 2px rgb(255 255 255 / 0.25); } .ds-shop-name { margin: 0; font-size: 16px; font-weight: 600; color: #fff; } .ds-shop-meta { margin: 2px 0 0; font-size: 14px; color: #b3b3b3; } .ds-shop-follow { margin-top: 12px; min-width: 104px; height: 32px; padding: 0 16px; border: none; border-radius: 9999px; background: transparent; color: #fff; font: inherit; font-size: 14px; font-weight: 700; box-shadow: inset 0 0 0 1px #7c7c7c; cursor: pointer; transition: transform 100ms cubic-bezier(0.3,0,0,1), box-shadow 100ms; } .ds-shop-follow:hover { transform: scale(1.04); box-shadow: inset 0 0 0 1px #fff; } .ds-shop-follow:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Marketplace You Live In",
+    "overview": "Sokoni is built as an app, not a page. Its chassis is the Spotify desktop player: a pure black frame holding rounded near-black panes, with a \"Saved & following\" rail on the left, the main view in the center, a chat-details view docked on the right on wide screens, and a persistent bottom bar. What fills that chassis is a marketplace, not a music app. The bottom bar holds the chat you're negotiating. Cards read as items for sale, with price first, location and seller trust. Home opens by saying plainly what Sokoni is, then offers categories with live counts and shelves of deals and shops.\n\nColor lives in the content, not the chrome. Every cover carries a seeded color (or a real photo), and that color washes the top of its entity page, the home header behind a hovered category tile, a shop card's shopfront band, and the phone chat bar. The chrome itself stays black, gray and white, with one green for Sokoni's own actions and live state (post, save, reply, continue). Buying happens on WhatsApp: a white pill carrying the WhatsApp glyph is the primary action on every listing, and in-app messaging sits beside it as an outline pill. Trust is drawn rather than written: a score ring, a blue rosette and safety tips sit beside every buying decision.\n\nDensity is app density: 14–16px UI type, tight 4–12px gaps inside shelves, generous 32px between sections, and 900-weight type only for the page's one name (an entity title, or the home statement).",
+    "keyCharacteristics": [
+      "Black frame (#000) holding 8px-radius #121212 panes with 8px gutters between them.",
+      "Figtree only: 900 for entity titles and the home statement, 400–700 for everything else.",
+      "Borderless cards that lift to white/7% on hover; no strokes at rest.",
+      "Pills for every button and chip; circles for icon buttons and people; rounded squares for items and businesses.",
+      "Green for Sokoni actions and live state. A white or outlined pill with the WhatsApp glyph is reserved for WhatsApp.",
+      "Each record's seeded cover color paints its own entity header."
+    ],
+    "rules": [
+      {
+        "name": "The WhatsApp Is White Rule",
+        "body": "WhatsApp is always a white pill (primary placements) or an outlined pill (secondary placements), and it always carries the real WhatsApp glyph. Green is never WhatsApp. A plain white pill without the glyph does not exist. The rule keeps the moment a buyer leaves Sokoni for WhatsApp unmistakable.",
+        "section": "colors"
+      },
+      {
+        "name": "The Content Carries Color Rule",
+        "body": "Chrome is black, gray and white. Saturation enters only through a record's seeded color or photo, and that color follows the record: its cover, its entity header, its shopfront band, its home-header wash and its phone chat bar.",
+        "section": "colors"
+      },
+      {
+        "name": "The Live Green Rule",
+        "body": "Green means a Sokoni action or something live right now. Selected filter chips are white with black text, not green.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Loud Line Rule",
+        "body": "900 weight belongs only to the page's one name: an entity title, or the home statement. Nothing sits above it. Category and verification go in the meta line beneath, and the verified rosette sits inline after an entity title at half its cap size.",
+        "section": "typography"
+      },
+      {
+        "name": "The Price First Rule",
+        "body": "On item cards the price comes before the title, in bold tabular numerals.",
+        "section": "typography"
+      },
+      {
+        "name": "The Chrome Stays Flat Rule",
+        "body": "Buttons, chips, cards, card covers and panels never take a shadow. Hover is a tint or a scale, never a lift. Shadows belong to floating layers (menus, toasts, the phone chat bar) and to hero art.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep the frame #000 and every pane #121212 at 8px radius with 8px gutters.",
+      "Do use green (#1ed760, black text) for Sokoni platform actions and live state only.",
+      "Do make WhatsApp the white pill with the real glyph as the primary buy action, with \"Message seller\" as an outline pill beside it.",
+      "Do paint entity headers with `seedColor(id)` and let the wash fade into the canvas.",
+      "Do use the record's photo when it exists, and the procedural seeded cover when it doesn't.",
+      "Do frame items 4:3 on cards with the price first.",
+      "Do give businesses square logo tiles and people round avatars.",
+      "Do lay out page content with container queries on the main pane, and keep shell visibility on viewport breakpoints.",
+      "Do show the trust ring and verified rosette beside every buying decision.",
+      "Do use tabular numerals for every price, score and count.",
+      "Do make every button and chip a pill, and every icon button a circle."
+    ],
+    "donts": [
+      "Don't render a WhatsApp action in green, or a white pill without the WhatsApp glyph.",
+      "Don't put an eyebrow, kicker or entity-type line above a title; category and verification go in the meta line.",
+      "Don't add borders or shadows to cards, card covers, chips, buttons or panels at rest.",
+      "Don't add grain, noise or texture overlays.",
+      "Don't use green for selected filter chips; selected chips are white with black text.",
+      "Don't introduce a second typeface; Figtree carries every role.",
+      "Don't use 900 weight anywhere but the page's one name.",
+      "Don't hide the save control behind hover; the bookmark stays visible on every card.",
+      "Don't drive in-pane layouts from viewport breakpoints.",
+      "Don't use faint gray (#7c7c7c) for text under 24px."
+    ]
+  }
+}
